@@ -1,0 +1,32 @@
+﻿@model Proyecto_Recursos_Humanos.Models.CARGOS
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<p id="nombre" class="fuente">Eliminar cargo</p>
+
+<h3 class="fuente">¿Desea eliminar este cargo?</h3>
+<div class="fuente">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color" id="link">
+    <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+    @Html.ActionLink("Regresar", "Index")
+</div>
+    }
+</div>

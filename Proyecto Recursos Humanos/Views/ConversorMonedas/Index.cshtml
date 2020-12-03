@@ -1,0 +1,32 @@
+﻿@model Proyecto_Recursos_Humanos.Models.Monedas
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+   <head>
+    </head>
+    <body id="cuerpo">
+        <p id="nombre" class="fuente">Conversor de monedas</p>
+
+        <div class="row fuente">
+            @using (Html.BeginForm("/Index", "ConversorMonedas", FormMethod.Post))
+            {
+                <div class="form-group">
+                    <label for="valor">Cantidad</label>
+                    <input type="text" class="form-control" id="valor" name="valor" value="@Model.valor" />
+                </div>
+
+                <div class="form-group">
+                    <label for="total">Total</label>
+                    <input type="text" class="form-control" id="total" name="total" value="@Model.total" />
+                </div>
+
+                <button type="submit" class="btn btn-success" id="valor" value="valor" name="convertir">DOP to USD</button>
+
+                <button type="submit" class="btn btn-primary" id="total" value="total" name="convertir">USD to DOP</button>
+            }
+       </div>
+   </body>
+</html>
+

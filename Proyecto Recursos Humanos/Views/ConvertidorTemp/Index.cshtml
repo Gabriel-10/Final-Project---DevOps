@@ -1,0 +1,32 @@
+﻿@model Proyecto_Recursos_Humanos.Models.Temperatura
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+</head>
+<body id="cuerpo">
+    <p id="nombre" class="fuente">Conversor de temperaturas</p>
+
+    <div class="row fuente">
+        @using (Html.BeginForm("/Index", "ConvertidorTemp", FormMethod.Post))
+        {
+            <div class="form-group">
+                <label for="cantidad">Temperatura</label>
+                <input type="text" class="form-control" id="cantidad" name="cantidad" value="@Model.cantidad" />
+            </div>
+
+            <div class="form-group">
+                <label for="total">Total</label>
+                <input type="text" class="form-control" id="total" name="total" value="@Model.total" />
+            </div>
+
+            <button type="submit" class="btn btn-warning" id="cantidad" value="cantidad" name="convertir">Fahrenheit to Celsius</button>
+
+            <button type="submit" class="btn btn-danger" id="total" value="total" name="convertir">Celsius to Fahrenheit</button>
+        }
+    </div>
+</body>
+</html>
+

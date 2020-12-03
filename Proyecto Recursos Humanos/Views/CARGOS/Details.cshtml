@@ -1,0 +1,25 @@
+﻿@model Proyecto_Recursos_Humanos.Models.CARGOS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+    <p id="nombre" class="fuente">Detalles del cargo</p>
+
+<div class="fuente">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargo)
+        </dd>
+
+    </dl>
+</div>
+<p class="fuente" id="link">
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id_Car }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>

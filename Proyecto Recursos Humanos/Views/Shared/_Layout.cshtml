@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Proyecto Final App</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+
+    <link href="~/Style/Styles.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="">
+                <ul class="nav navbar-nav">
+                    @Html.ActionLink("Registro De Empleados", "Index", "EMPLEADOS", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Nóminas", "Index", "NOMINAS", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Departamentos", "Index", "DEPARTAMENTOS", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Cargos", "Index", "CARGOS", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Calculadora", "Index", "Calcular", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Conversor De Monedas", "Index", "ConversorMonedas", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Conversor De Temperaturas", "Index", "ConvertidorTemp", new { area = "" }, new { @class = "navbar-brand" })
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer id="footer">
+            <p>&copy; @DateTime.Now.Year - Created By: Gabriel Guerrero.</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

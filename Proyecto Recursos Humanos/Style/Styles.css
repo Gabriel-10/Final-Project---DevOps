@@ -1,0 +1,46 @@
+﻿body {
+    background-color: lightgray;
+}
+
+#latabla {
+    color: white;
+    background-color: darkslategray;
+    font-family: Oswald;
+}
+
+#espacio{
+    color: whitesmoke;
+    margin-top: 200px;
+}
+
+#nombre {
+    color: black;
+    margin-left: 4px;
+    font-family: Oswald;
+    font-size: 35px;
+}
+
+#cuerpo{
+    background-color: lightgray;
+}
+
+#link {
+    margin-left: 4px;
+    font-family: Oswald;
+    font-size: 15px;
+}
+
+td{
+    background-color: whitesmoke;
+}
+
+.navbar {
+    background-color: darkslategray;
+    font-family: Oswald;
+}
+
+.fuente, #actions {
+    color: black;
+    font-family: Oswald;
+}
+

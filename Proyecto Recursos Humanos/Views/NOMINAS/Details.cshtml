@@ -1,0 +1,41 @@
+﻿@model Proyecto_Recursos_Humanos.Models.NOMINAS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+    <p id="nombre" class="fuente">Detalles de la nómina</p>
+
+<div class="fuente">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Mes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Año)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Año)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Monto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Monto)
+        </dd>
+
+    </dl>
+</div>
+<p class="fuente" id="link">
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id_Nominas }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>
